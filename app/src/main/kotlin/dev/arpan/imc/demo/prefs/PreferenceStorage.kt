@@ -14,7 +14,7 @@ interface PreferenceStorage {
     val loggedInUserEmailObservable: LiveData<String?>
 }
 
-fun PreferenceStorage.logout(){
+fun PreferenceStorage.logout() {
     loggedInUserEmail = null
 }
 

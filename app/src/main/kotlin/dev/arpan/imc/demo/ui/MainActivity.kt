@@ -33,10 +33,13 @@ class MainActivity : AppCompatActivity(), NavigationHost {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        viewModel.logout.observe(this, EventObserver {
-            getString(R.string.main_logout_msg).toToast(this)
-            navController.navigate(MainNavDirections.toGlobalLogin())
-        })
+        viewModel.logout.observe(
+            this,
+            EventObserver {
+                getString(R.string.main_logout_msg).toToast(this)
+                navController.navigate(MainNavDirections.toGlobalLogin())
+            }
+        )
     }
 
     override fun registerToolbarWithNavigation(toolbar: Toolbar) {
