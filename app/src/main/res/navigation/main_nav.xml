@@ -44,4 +44,10 @@
         android:name="dev.arpan.imc.demo.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <action
+        android:id="@+id/to_global_login"
+        app:destination="@id/nav_login"
+        app:popUpTo="@id/main_nav"
+        app:popUpToInclusive="true" />
 </navigation>

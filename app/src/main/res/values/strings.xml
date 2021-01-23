@@ -29,6 +29,9 @@
     <string name="all_cannot_change_location_settings_msg">Location settings cannot be changed from the app, please fix it from the system settings.</string>
     <string name="all_unexpected_error">Unexpected error.</string>
 
+    <!--Main Activity-->
+    <string name="main_logout_msg">You successfully logged out of the application.</string>
+
     <!-- Login Fragment-->
     <string name="login_btn_login">Login</string>
     <string name="login_btn_sign_up">Sign up</string>
@@ -39,5 +42,8 @@
     <string name="sign_up_email_already_exists">Email already registered.</string>
     <string name="sign_up_success">Sign up successful.</string>
     <string name="sign_up_btn_sign_up">Sign up</string>
+
+    <!-- Profile Fragment-->
+    <string name="btn_profile_logout">Logout</string>
 
 </resources>

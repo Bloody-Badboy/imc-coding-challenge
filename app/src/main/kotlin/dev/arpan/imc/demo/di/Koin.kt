@@ -8,6 +8,7 @@ import dev.arpan.imc.demo.data.UserRepository
 import dev.arpan.imc.demo.data.local.db.AppDatabase
 import dev.arpan.imc.demo.prefs.PreferenceStorage
 import dev.arpan.imc.demo.prefs.SharedPreferenceStorage
+import dev.arpan.imc.demo.ui.MainViewModel
 import dev.arpan.imc.demo.ui.home.HomeViewModel
 import dev.arpan.imc.demo.ui.login.LoginViewModel
 import dev.arpan.imc.demo.ui.profile.ProfileViewModel
@@ -46,6 +47,11 @@ val repoModule = module {
 }
 
 val viewModelModule = module {
+
+    viewModel {
+        MainViewModel(get())
+    }
+
     viewModel {
         LoginViewModel(get(), get())
     }
@@ -59,7 +65,7 @@ val viewModelModule = module {
     }
 
     viewModel {
-        ProfileViewModel()
+        ProfileViewModel(get())
     }
 }
 
