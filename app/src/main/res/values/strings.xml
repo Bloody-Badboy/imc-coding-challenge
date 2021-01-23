@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">IMC Challenge</string>
+
+    <string name="title_login">Login</string>
+    <string name="title_sign_up">Sign up</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- Common -->
+    <string name="all_hint_email">Email</string>
+    <string name="all_hint_password">Password</string>
+    <string name="all_hint_first_name">First Name</string>
+    <string name="all_hint_last_name">Last Name</string>
+    <string name="all_hint_mobile_number">Mobile Number</string>
+    <string name="all_hint_current_location">Current Location</string>
+
+    <!-- Common Button Texts-->
+    <string name="all_btn_enable">Enable</string>
+    <string name="all_btn_settings">Open Settings</string>
+
+    <!-- Errors -->
+    <string name="all_error_invalid_email">Invalid email address.</string>
+    <string name="all_error_invalid_password">At least one number, one uppercase, one lowercase.</string>
+    <string name="all_permission_denied">Permission denied</string>
+    <string name="all_location_permission">Location Permission</string>
+    <string name="all_location_permission_required_msg">Without location permission the app is unable to locate where you are. To continue using the app please allow the location permission from the settings.</string>
+    <string name="all_enable_location_provider">Enable GPS</string>
+    <string name="all_device_location_not_enabled">Device location is not enabled or required location providers are not enabled.</string>
+    <string name="all_cannot_change_location_settings_msg">Location settings cannot be changed from the app, please fix it from the system settings.</string>
+    <string name="all_unexpected_error">Unexpected error.</string>
+
+    <!-- Login Fragment-->
+    <string name="login_btn_login">Login</string>
+    <string name="login_btn_sign_up">Sign up</string>
+    <string name="login_label_sign_up">Don\'t have an account?</string>
+    <string name="login_invalid_credentials">Invalid credentials.</string>
+
+    <!-- SignUp Fragment-->
+    <string name="sign_up_email_already_exists">Email already registered.</string>
+    <string name="sign_up_success">Sign up successful.</string>
+    <string name="sign_up_btn_sign_up">Sign up</string>
+
+</resources>
