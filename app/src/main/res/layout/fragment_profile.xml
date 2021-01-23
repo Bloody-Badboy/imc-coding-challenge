@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -34,19 +35,147 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+            <ImageView
+                android:id="@+id/iv_profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_profile" />
+
             <Button
                 android:id="@+id/btn_profile_logout"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/btn_profile_logout"
                 android:onClick="@{() -> viewModel.logout()}"
+                android:text="@string/btn_profile_logout"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <TextView
+                android:id="@+id/tv_profile_label_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/profile_label_first_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile_image" />
+
+            <TextView
+                android:id="@+id/tv_profile_first_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{viewModel.user.firstName}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_label_first_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_label_first_name"
+                tools:text="@tools:sample/first_names" />
+
+            <TextView
+                android:id="@+id/tv_profile_label_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/all_hint_last_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_label_first_name" />
+
+            <TextView
+                android:id="@+id/tv_profile_last_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{viewModel.user.lastName}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_label_last_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_label_last_name"
+                tools:text="@tools:sample/last_names" />
+
+            <TextView
+                android:id="@+id/tv_profile_label_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile_label_email"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_label_last_name" />
+
+            <TextView
+                android:id="@+id/tv_profile_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{viewModel.user.email}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_label_email"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_label_email"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/tv_profile_label_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile_label_mobile_number"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_label_email" />
+
+            <TextView
+                android:id="@+id/tv_profile_mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{viewModel.user.mobileNumber}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_label_mobile_number"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_label_mobile_number"
+                tools:text="@tools:sample/us_phones" />
+
+            <TextView
+                android:id="@+id/tv_profile_label_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile_label_current_location"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_label_mobile_number" />
+
+            <TextView
+                android:id="@+id/tv_profile_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{`` + viewModel.user.latitude+ `, ` +viewModel.user.longitude}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/tv_profile_label_location"
+                app:layout_constraintTop_toTopOf="@+id/tv_profile_label_location"
+                tools:text="0, 0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

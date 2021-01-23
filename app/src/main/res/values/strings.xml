@@ -44,6 +44,11 @@
     <string name="sign_up_btn_sign_up">Sign up</string>
 
     <!-- Profile Fragment-->
+    <string name="profile_label_email">Email :</string>
+    <string name="profile_label_first_name">First Name :</string>
+    <string name="profile_label_last_name">Last Name :</string>
+    <string name="profile_label_mobile_number">Mobile Number :</string>
+    <string name="profile_label_current_location">Current Location :</string>
     <string name="btn_profile_logout">Logout</string>
 
 </resources>
