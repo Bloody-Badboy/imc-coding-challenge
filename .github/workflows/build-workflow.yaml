@@ -12,5 +12,11 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
+
+      - name: Set up JDK 15 (early access)
+        uses: actions/setup-java@v1
+        with:
+          java-version: '15.0.0-ea'
+
       - name: Build the app
         run: ./gradlew build
