@@ -26,13 +26,29 @@
                 android:background="?attr/colorPrimary"
                 app:menu="@menu/menu_home"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:title="@string/title_login" />
+                app:title="@string/title_home" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <Button
+                android:id="@+id/btn_home_schedule"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:text="@string/home_btn_pick_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

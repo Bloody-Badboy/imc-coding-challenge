@@ -8,9 +8,9 @@ import dev.arpan.imc.demo.data.UserRepository
 import dev.arpan.imc.demo.data.local.db.AppDatabase
 import dev.arpan.imc.demo.prefs.PreferenceStorage
 import dev.arpan.imc.demo.prefs.SharedPreferenceStorage
-import dev.arpan.imc.demo.ui.MainViewModel
 import dev.arpan.imc.demo.ui.home.HomeViewModel
 import dev.arpan.imc.demo.ui.login.LoginViewModel
+import dev.arpan.imc.demo.ui.main.MainViewModel
 import dev.arpan.imc.demo.ui.profile.ProfileViewModel
 import dev.arpan.imc.demo.ui.signup.SignUpViewModel
 import org.koin.android.ext.koin.androidContext
@@ -61,7 +61,7 @@ val viewModelModule = module {
     }
 
     viewModel {
-        HomeViewModel()
+        HomeViewModel(get())
     }
 
     viewModel {

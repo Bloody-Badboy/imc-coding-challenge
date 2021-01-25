@@ -12,6 +12,8 @@ interface PreferenceStorage {
     var loggedInUserEmail: String?
 
     val loggedInUserEmailObservable: LiveData<String?>
+
+    var notifyTriggerMillis: Long
 }
 
 fun PreferenceStorage.logout() {
@@ -25,6 +27,7 @@ class SharedPreferenceStorage(
     companion object {
         const val PREFS_NAME = "imc_demo"
         const val PREF_DARK_MODE_ENABLED = "pref_logged_in_user_email"
+        const val PREF_NOTIFY_TRIGGER_MILLIS = "pref_notify_trigger_millis"
     }
 
     private val prefs: Lazy<SharedPreferences> = lazy {
@@ -49,6 +52,11 @@ class SharedPreferenceStorage(
         null
     )
 
+    override var notifyTriggerMillis: Long by LongPreference(
+        prefs,
+        PREF_NOTIFY_TRIGGER_MILLIS,
+        0
+    )
     override val loggedInUserEmailObservable: LiveData<String?>
         get() = _observableSelectedThemeResult
 }
@@ -72,5 +80,27 @@ class StringPreference(
         value: String?
     ) {
         preferences.value.edit { putString(name, value) }
+    }
+}
+
+class LongPreference(
+    private val preferences: Lazy<SharedPreferences>,
+    private val name: String,
+    private val defaultValue: Long
+) : ReadWriteProperty<Any, Long> {
+
+    override fun getValue(
+        thisRef: Any,
+        property: KProperty<*>
+    ): Long {
+        return preferences.value.getLong(name, defaultValue)
+    }
+
+    override fun setValue(
+        thisRef: Any,
+        property: KProperty<*>,
+        value: Long
+    ) {
+        preferences.value.edit { putLong(name, value) }
     }
 }

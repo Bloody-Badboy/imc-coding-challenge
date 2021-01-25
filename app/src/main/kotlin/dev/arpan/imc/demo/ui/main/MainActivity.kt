@@ -1,4 +1,4 @@
-package dev.arpan.imc.demo.ui
+package dev.arpan.imc.demo.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import dev.arpan.imc.demo.MainNavDirections
 import dev.arpan.imc.demo.R
+import dev.arpan.imc.demo.ui.NavigationHost
 import dev.arpan.imc.demo.utils.EventObserver
 import dev.arpan.imc.demo.utils.toToast
 import org.koin.android.viewmodel.ext.android.viewModel

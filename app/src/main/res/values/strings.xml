@@ -51,4 +51,14 @@
     <string name="profile_label_current_location">Current Location :</string>
     <string name="btn_profile_logout">Logout</string>
 
+    <!-- Sample Notification-->
+    <string name="app_notification_channel_id">app_notification</string>
+    <string name="app_notification_channel_desc">App Notifications</string>
+    <string name="notification_title">Lorem ipsum dolor sit amet</string>
+    <string name="notification_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet aliquam id diam maecenas ultricies mi eget.</string>
+    <string name="home_btn_pick_time">Pick Time</string>
+    <string name="home_time_picker_title">Pick Time</string>
+    <string name="home_date_picker_title">Pick Date</string>
+    <string name="home_picker_time_error">Selected date time cannot be less than %1$s</string>
+    <string name="home_picker_selected_time">Selected time %1$s</string>
 </resources>

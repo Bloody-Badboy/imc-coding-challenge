@@ -60,7 +60,7 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.2.1")
+    implementation("com.google.android.material:material:1.3.0-rc01")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
 
     // Koin
@@ -85,6 +85,9 @@ dependencies {
     implementation("androidx.room:room-ktx:2.3.0-alpha04")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt("androidx.room:room-compiler:2.3.0-alpha04")
+
+    // Work Manager
+    implementation("androidx.work:work-runtime-ktx:2.4.0")
 
     implementation("com.google.android.gms:play-services-location:17.1.0")
 

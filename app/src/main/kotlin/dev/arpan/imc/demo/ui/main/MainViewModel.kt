@@ -1,4 +1,4 @@
-package dev.arpan.imc.demo.ui
+package dev.arpan.imc.demo.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData

@@ -14,7 +14,7 @@
         android:fullBackupContent="false"
         android:theme="@style/Theme.IMCChallenge">
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

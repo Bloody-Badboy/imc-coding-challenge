@@ -8,6 +8,7 @@ import dev.arpan.imc.demo.MOCK_USER
 import dev.arpan.imc.demo.MainCoroutineRule
 import dev.arpan.imc.demo.getOrAwaitValue
 import dev.arpan.imc.demo.prefs.PreferenceStorage
+import dev.arpan.imc.demo.ui.main.MainViewModel
 import org.junit.Rule
 import org.junit.Test
 import java.util.concurrent.TimeoutException
