@@ -137,8 +137,11 @@ class HomeFragment : NavigationDestinationFragment() {
     }
 
     private fun showSnack(msg: String) {
-        Snackbar.make(requireNotNull(view as CoordinatorLayout?) {
-            "Fragment root view must be a CoordinatorLayout"
-        }, msg, Snackbar.LENGTH_LONG).show()
+        Snackbar.make(
+            requireNotNull(view as CoordinatorLayout?) {
+                "Fragment root view must be a CoordinatorLayout"
+            },
+            msg, Snackbar.LENGTH_LONG
+        ).show()
     }
 }

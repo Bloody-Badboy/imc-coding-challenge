@@ -10,7 +10,61 @@ Built With 🛠
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android
 - [Koin](https://github.com/InsertKoinIO/com.egoriku.landing.koin) - Dependency Injection Framework
 
-<br/><br/>
+
+## Source Tree
+```
+└── dev
+    └── arpan
+        └── imc
+            └── demo
+                ├── background
+                │   └── NotificationSchedulerWorker.kt
+                ├── data
+                │   ├── local
+                │   │   └── db
+                │   │       ├── AppDatabase.kt
+                │   │       └── UsersDao.kt
+                │   ├── model
+                │   │   ├── CurrentLocation.kt
+                │   │   ├── ResultWrapper.kt
+                │   │   └── User.kt
+                │   └── UserRepository.kt
+                ├── DemoApplication.kt
+                ├── di
+                │   └── Koin.kt
+                ├── location
+                │   └── LocationRetriever.kt
+                ├── prefs
+                │   └── PreferenceStorage.kt
+                ├── ui
+                │   ├── home
+                │   │   ├── HomeFragment.kt
+                │   │   └── HomeViewModel.kt
+                │   ├── login
+                │   │   ├── LoginFragment.kt
+                │   │   ├── LoginFrom.kt
+                │   │   └── LoginViewModel.kt
+                │   ├── main
+                │   │   ├── MainActivity.kt
+                │   │   └── MainViewModel.kt
+                │   ├── Navigator.kt
+                │   ├── profile
+                │   │   ├── ProfileFragment.kt
+                │   │   └── ProfileViewModel.kt
+                │   └── signup
+                │       ├── SignUpFragment.kt
+                │       ├── SignUpFrom.kt
+                │       └── SignUpViewModel.kt
+                └── utils
+                    ├── BindingAdapter.kt
+                    ├── DateUtils.kt
+                    ├── Event.kt
+                    ├── Extensions.kt
+                    ├── LiveFrom.kt
+                    ├── Notify.kt
+                    └── Validator.kt
+
+```
 ## Challenge Brief:
 -------
 Create a simple working app with 4 pages as described :
@@ -36,7 +90,7 @@ One single button on the home page ("Pick Time"). On clicking the button present
 Form Validation to be done for this form to pick only future times of the day and not past time.
 
               
-
+rin
 4) Profile Page
 
 Page to display the user’s registered data retrieved from local storage along with stored Latitude and Longitude.
